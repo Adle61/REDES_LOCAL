@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guía sobre los elementos básicos de configuración de una red pequeña">
+    <title>Redes Pequeñas | Configuración Básica</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#inicio" class="logo">
+                <span class="logo-icon">🌐</span>
+                <span>Red<span class="accent">Pequeñas</span></span>
+            </a>
+
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#conceptos">Conceptos</a></li>
+                <li><a href="#elementos">Elementos</a></li>
+                <li><a href="#arquitectura">Arquitectura</a></li>
+                <li><a href="#topologias">Topologías</a></li>
+                <li><a href="#ipconfig">ipconfig</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO con fondo animado -->
+    <section class="hero" id="inicio">
+        <canvas id="networkCanvas" class="hero-canvas"></canvas>
+        <div class="container hero-content">
+            <h1>Configuración Básica de una <span class="accent">Red Pequeña</span></h1>
+            <p>Aprende los elementos fundamentales para diseñar, configurar y mantener una red funcional en casa u oficina.</p>
+            <a href="#conceptos" class="btn">Comenzar</a>
+        </div>
+    </section>
+
+    <!-- CONCEPTOS con FLIP -->
+    <section class="section" id="conceptos">
+        <div class="container">
+            <h2 class="section-title">¿Qué es una Red Pequeña?</h2>
+            <p class="section-subtitle">Una red pequeña conecta dispositivos en un área limitada (LAN), como un hogar o una pequeña oficina.</p>
+
+            <div class="cards">
+                <!-- Card 1 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">🏠</div>
+                            <h3>LAN</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>LAN</h3>
+                            <p>Red de Área Local. Conecta dispositivos dentro de un edificio o espacio físico cercano, permitiendo compartir recursos y datos a alta velocidad.</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">⚡</div>
+                            <h3>Velocidad</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Velocidad</h3>
+                            <p>Las redes locales ofrecen alta velocidad de transmisión que va desde los 100 Mbps hasta 10 Gbps, ideal para transferencias rápidas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">🔒</div>
+                            <h3>Seguridad</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Seguridad</h3>
+                            <p>Los datos permanecen dentro de la red local, con controles de acceso configurables mediante contraseñas WPA2/WPA3 y firewalls.</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">💰</div>
+                            <h3>Bajo Costo</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Bajo Costo</h3>
+                            <p>Equipos accesibles: routers, switches y cableado de bajo presupuesto permiten montar una red funcional con inversión mínima.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="section section-alt" id="elementos">
+        <div class="container">
+            <h2 class="section-title">Elementos Básicos de Configuración</h2>
+            <p class="section-subtitle">Haz clic en cada elemento para ver su información detallada.</p>
+
+            <div class="elements-grid">
+                <button class="element-card" data-element="router">
+                    <span class="element-icon">📡</span>
+                    <h3>Router</h3>
+                    <span class="element-hint">Clic para más info</span>
+                </button>
+
+                <button class="element-card" data-element="switch">
+                    <span class="element-icon">🔀</span>
+                    <h3>Switch</h3>
+                    <span class="element-hint">Clic para más info</span>
+                </button>
+
+                <button class="element-card" data-element="ip">
+                    <span class="element-icon">🔢</span>
+                    <h3>Direccionamiento IP</h3>
+                    <span class="element-hint">Clic para más info</span>
+                </button>
+
+                <button class="element-card" data-element="dhcp">
+                    <span class="element-icon">⚙️</span>
+                    <h3>DHCP</h3>
+                    <span class="element-hint">Clic para más info</span>
+                </button>
+
+                <button class="element-card" data-element="dns">
+                    <span class="element-icon">🌍</span>
+                    <h3>DNS</h3>
+                    <span class="element-hint">Clic para más info</span>
+                </button>
+
+                <button class="element-card" data-element="wifi">
+                    <span class="element-icon">📶</span>
+                    <h3>Seguridad WiFi</h3>
+                    <span class="element-hint">Clic para más info</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    
+    <div class="modal" id="elementModal" aria-hidden="true">
+        <div class="modal-overlay" data-close-modal></div>
+        <div class="modal-box" role="dialog" aria-modal="true">
+            <button class="modal-close" data-close-modal aria-label="Cerrar">&times;</button>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    
+    <section class="section" id="arquitectura">
+        <div class="container">
+            <h2 class="section-title">Arquitectura de la Red Local</h2>
+            <p class="section-subtitle">Explora cómo se conectan los dispositivos. Pasa el cursor o toca cada elemento para ver su función.</p>
+
+            <div class="architecture">
+                
+                <div class="arch-row">
+                    <div class="arch-node arch-internet" data-info="Internet: Red externa mundial (WAN) a la que se conecta tu red local a través del módem/router del proveedor.">
+                        <span class="arch-icon">🌍</span>
+                        <span class="arch-label">Internet</span>
+                    </div>
+                </div>
+                <div class="arch-line"></div>
+
+                
+                <div class="arch-row">
+                    <div class="arch-node arch-router" data-info="Router: Dispositivo central que conecta la red local con Internet. Asigna IPs (DHCP), gestiona el tráfico y aplica seguridad (firewall).">
+                        <span class="arch-icon">📡</span>
+                        <span class="arch-label">Router</span>
+                    </div>
+                </div>
+
+                
+                <div class="arch-branches">
+                    <div class="arch-branch-line"></div>
+                </div>
+
+                
+                <div class="arch-row">
+                    <div class="arch-node arch-switch" data-info="Switch: Conecta varios dispositivos por cable dentro de la LAN. Distribuye los datos a cada equipo según su dirección MAC.">
+                        <span class="arch-icon">🔀</span>
+                        <span class="arch-label">Switch</span>
+                    </div>
+                </div>
+                <div class="arch-line"></div>
+
+                
+                <div class="arch-row arch-devices">
+                    <div class="arch-node" data-info="PC de escritorio: Recibe una IP por DHCP (ej. 192.168.1.10). Se conecta al switch por cable Ethernet para acceder a la red y a Internet.">
+                        <span class="arch-icon">💻</span>
+                        <span class="arch-label">PC</span>
+                    </div>
+                    <div class="arch-node" data-info="Laptop: Se conecta por WiFi (SSID) o cable. Obtiene su IP automáticamente y puede acceder a todos los recursos de la red.">
+                        <span class="arch-icon">💻</span>
+                        <span class="arch-label">Laptop</span>
+                    </div>
+                    <div class="arch-node" data-info="Impresora de red: Comparte impresión con todos los dispositivos de la LAN. Tiene su propia IP fija o reservada.">
+                        <span class="arch-icon">🖨️</span>
+                        <span class="arch-label">Impresora</span>
+                    </div>
+                    <div class="arch-node" data-info="Smartphone: Se conecta por WiFi (WPA2/WPA3). Recibe IP por DHCP y accede a Internet y a los recursos compartidos de la LAN.">
+                        <span class="arch-icon">📱</span>
+                        <span class="arch-label">Móvil</span>
+                    </div>
+                </div>
+
+                
+                <div class="arch-info" id="archInfo">
+                    <span class="arch-info-icon">👉</span>
+                    <p>Selecciona un elemento del diagrama para ver su función.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="section section-alt" id="topologias">
+        <div class="container">
+            <h2 class="section-title">Topologías Comunes</h2>
+            <p class="section-subtitle">Formas de organizar físicamente los dispositivos en la red.</p>
+
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="estrella">Estrella</button>
+                <button class="tab-btn" data-tab="bus">Bus</button>
+                <button class="tab-btn" data-tab="malla">Malla</button>
+            </div>
+
+            <div class="tab-content active" id="estrella">
+                <h3>⭐ Topología en Estrella</h3>
+                <p>La más usada en redes pequeñas. Todos los dispositivos se conectan a un switch o router central. Si un cable falla, solo afecta a un dispositivo.</p>
+            </div>
+
+            <div class="tab-content" id="bus">
+                <h3>🚌 Topología en Bus</h3>
+                <p>Todos los dispositivos comparten un único cable principal. Es económica pero poco confiable: si el cable central falla, toda la red cae.</p>
+            </div>
+
+            <div class="tab-content" id="malla">
+                <h3>🕸️ Topología en Malla</h3>
+                <p>Cada dispositivo se conecta con varios otros. Alta redundancia y disponibilidad, pero costosa y compleja de administrar.</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="section" id="ipconfig">
+        <div class="container">
+            <h2 class="section-title">Simulador en Vivo: ipconfig</h2>
+            <p class="section-subtitle">Ejecuta el comando y observa cómo se muestra la configuración de red real de un equipo.</p>
+
+            <div class="terminal-wrapper">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="terminal-title">Símbolo del sistema — cmd.exe</span>
+                </div>
+                <div class="terminal-body" id="terminalBody">
+                    <div class="terminal-line">Microsoft Windows [Versión 10.0.19045.4291]</div>
+                    <div class="terminal-line">(c) Microsoft Corporation. Todos los derechos reservados.</div>
+                    <div class="terminal-line">&nbsp;</div>
+                    <div class="terminal-line" id="terminalOutput"></div>
+                </div>
+                <div class="terminal-actions">
+                    <button class="btn btn-terminal" id="runIpconfig">▶ Ejecutar comando ipconfig</button>
+                    <button class="btn btn-terminal btn-clear" id="clearIpconfig">🧹 Limpiar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 RedPeque · Guía de Redes Pequeñas</p>
+            <p>Hecho con HTML, CSS y JavaScript</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
